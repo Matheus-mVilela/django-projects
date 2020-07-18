@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import Person
 
 # Create your views here.
 
 
 def person_list(request):
-    return render(request, 'pessoas.html')
+    persons = Person.objects.all()
+    return render(request, 'person.html', {'persons': persons})
+
+
