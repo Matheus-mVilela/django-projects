@@ -9,14 +9,12 @@
 
 <body>
 
-    <ul>
-        {%for person in persons%}
-        <li>{{person.first_name}}</li>
-        {%endfor%}
+    <form action="{% url 'person_new'%}" method="POST" enctype="multipart/form-data">
+        {%csrf_token%} {{form}}
+        <button type="submit"> Salvar</button>
+    </form>
 
-    </ul>
 
-    <a href="{%url 'person_new'%}">Cadastar Novamente</a>
 </body>
 
 </html>
