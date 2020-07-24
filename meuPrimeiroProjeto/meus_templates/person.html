@@ -11,7 +11,7 @@
 
     <ul>
         {%for person in persons%}
-        <li>{{person.first_name}}</li>
+        <li><a href="{% url 'person_update' person.id%}">{{person.first_name}}</a></li>
         {%endfor%}
 
     </ul>
