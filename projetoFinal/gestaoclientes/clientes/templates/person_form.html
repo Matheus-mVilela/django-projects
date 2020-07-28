@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+
+        <label for="id_first_name">First name:</label>
+        <input type="text" name="first_name" maxlength="30" required id="id_first_name">
+
+
+        <label for="id_last_name">Last name:</label>
+        <input type="text" name="last_name" maxlength="30" required id="id_last_name">
+
+
+        <label for="id_age">Age:</label>
+        <input type="number" name="age" required id="id_age">
+
+
+        <label for="id_salary">Salary:</label>
+        <input type="number" name="salary" step="0.01" required id="id_salary">
+
+        <label style="color:red" for="id_bio">Bio:</label>
+        <textarea name="bio" cols="40" rows="10" required id="id_bio">
+</textarea>
+
+
+        <label for="id_photo">Photo:</label>
+        <input type="file" name="photo" accept="image/*" id="id_photo">
+
+        <button type="submit"> Salvar</button>
+    </form>
+
+</body>
+
+</html>
