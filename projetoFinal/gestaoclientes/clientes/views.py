@@ -29,7 +29,7 @@ def person_update(request, id):
         form.save()
         return redirect("person_list")
 
-    return render(request, "person_form.html", {"form": form})
+    return render(request, "person_form.html", {"form": form, "pessoa":person})
 
 
 def person_delete(request, id):
