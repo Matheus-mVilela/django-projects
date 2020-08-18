@@ -21,22 +21,28 @@
         <label for="id_first_name">First name:</label>
         <input value="{{pessoa.first_name}}" type="text" name="first_name" maxlength="30" required id="id_first_name">
 
+        <br>
 
         <label for="id_last_name">Last name:</label>
         <input value="{{pessoa.last_name}}" type="text" name="last_name" maxlength="30" required id="id_last_name">
 
+        <br>
 
         <label for="id_age">Age:</label>
         <input value="{{pessoa.age}}" type="number" name="age" required id="id_age">
 
+        <br>
 
         <label for="id_salary">Salary:</label>
         <input value="{{pessoa.salary}}" type="number" name="salary" step="0.01" required id="id_salary">
+
+        <br>
 
         <label style="color:red" for="id_bio">Bio:</label>
         <textarea placeholder="{{pessoa.bio}}" name="bio" cols="40" rows="10" required id="id_bio">
 </textarea>
 
+        <br>
 
         <label for="id_photo">Photo:</label>
         <input  type="file" name="photo" accept="image/*" id="id_photo">
