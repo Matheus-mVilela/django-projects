@@ -44,3 +44,7 @@ def person_delete(request, id):
         return redirect("person_list")
 
     return render(request, "person_delete_confirm.html", {"form": form})
+
+
+def return_list(request):
+    return redirect("person_list")
