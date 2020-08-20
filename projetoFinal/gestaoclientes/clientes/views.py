@@ -5,6 +5,7 @@ from .form import PersonForm
 
 # Create your views here.
 
+
 @login_required
 def person_list(request):
     persons = Person.objects.all()

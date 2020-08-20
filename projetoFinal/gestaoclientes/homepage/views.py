@@ -9,3 +9,6 @@ def homepage(request):
 def logout_view(request):
     logout(request)
     return redirect('homepage')
+
+def cadastroclientes(request):
+    return redirect('person_list')

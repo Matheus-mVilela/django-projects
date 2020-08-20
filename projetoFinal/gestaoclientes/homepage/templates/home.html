@@ -10,6 +10,7 @@
 {%if user.is_authenticated%}
     <p>Olá {{user.username}}</p>
     <a href="{%url 'logout'%}">Logout</a>
+    <a class="btn btn-danger" href="{%url 'cadastroclientes'%}">Cadastro Clientes</a>
 {%else%}
     <a href="{%url 'login'%}">Login</a>
 {%endif%}
