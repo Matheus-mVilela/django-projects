@@ -17,3 +17,13 @@ class Person(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+
+
+class Venda(models.Model):
+    numero = models.CharField(max_length=7)
+    desconto = models.DecimalField(max_digits=6, decimal_places=2)
+    impostos = models.DecimalField(max_digits=6, decimal_places=2)
+    pessoa = models.ForeignKey(Person, null=True, blank=True, on_delete=models.PROTECT)
+
+    def __srt__ (self):
+        return self.numero
