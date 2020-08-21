@@ -5,19 +5,16 @@
 {%block main%}
 <div class="row">
     <div class="col-sm"></div>
-
     <div class="col-sm">
-        <h1>Seja bem vindo</h1>
-    </div>
-
-    <div class="col-sm">
+        <h1 style="text-align: center;">Seja bem vindo!</h1>
         {%if user.is_authenticated%}
         <p>Olá {{user.username}}</p>
         <a href="{%url 'logout'%}">Logout</a>
         <a class="btn btn-danger" href="{%url 'cadastroclientes'%}">Cadastro Clientes</a>
         {%else%}
-        <a class="btn btn-warning" href="{%url 'login'%}">Login</a>
+        <a class=" btn btn-warning login-center" href="{%url 'login'%}">Login</a>
         {%endif%}
     </div>
+    <div class="col-sm"></div>
 </div>
 {%endblock%}
