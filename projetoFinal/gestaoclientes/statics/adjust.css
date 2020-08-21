@@ -1,0 +1,13 @@
+.trash-icon{
+    float:right;
+    color: red;
+}
+
+.trash-icon:hover{
+    color: rgb(255, 123, 0);
+}
+
+
+.margin-adjust{
+    margin-top: 10px;
+}

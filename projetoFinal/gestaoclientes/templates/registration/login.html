@@ -1,15 +1,29 @@
 {%extends 'base.html'%}
+{% load bootstrap %}
 
 {%block title%}LOGIN PAGE {%endblock%}
 
 {%block main%}
-<h2>login</h2>
-<div>
-    <form method="POST" action="">
-        {%csrf_token%}
-        {{form.as_p}}
-        <input class="btn btn-warning" type="submit" value="login">
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <h2>Login</h2>
+            <form method="POST" action="">
+                {%csrf_token%}
+                {{ form|bootstrap }}
+                <input class="btn btn-warning" type="submit" value="login">
+            </form>
+        </div>
+        <div class="col-sm"></div>
+    </div>
 </div>
+{%endblock%}
 
+{%block footer%}
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Desenvolvimento prjeto django 2.x</span>
+    </div>
+</footer>
 {%endblock%}

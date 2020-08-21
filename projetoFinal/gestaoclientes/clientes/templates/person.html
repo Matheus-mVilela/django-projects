@@ -3,15 +3,24 @@
 {%block title%}LOGIN PAGE {%endblock%}
 
 {%block main%}
-<a href="{%url 'logout'%}">Sair</a>
-<ul>
-    {%for person in persons%}
-    <li><a href="{% url 'person_update' person.id%}">{{person.first_name}}</a>
-        <a  href="{% url 'person_delete' person.id%}"  class="btn btn-danger">Excluir</a>
-    </li>
-    {%endfor%}
-</ul>
-
-<a href="{%url 'person_new'%}" class="btn btn-warning">Cadastar Novamente</a>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <ul class="list-group">
+                {%for person in persons%}
+                <li class="list-group-item">
+                    <a href="{% url 'person_update' person.id%}">{{person.first_name}} {{person.last_name}}</a>
+                    <a class="trash-icon" href="{% url 'person_delete' person.id%}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </li>
+                {%endfor%}
+            </ul>
+            <a href="{%url 'person_new'%}" class="btn btn-warning margin-adjust">Cadastar Novamente</a>
+            <a class="btn btn-danger margin-adjust" href="{%url 'logout'%}">Sair</a>
+        </div>
+        <div class="col-sm">
+           
+        </div>
+    </div>
+</div>
 {%endblock%}

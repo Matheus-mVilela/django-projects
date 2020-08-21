@@ -4,12 +4,19 @@
 
 
 {%block main%}
-    <form method="POST" enctype="multipart/form-data">
-        {%csrf_token%}
-        {{ form|bootstrap }}
-        <input class="btn btn-info" type="submit" value="Salvar">
-    </form>
-
-        <a class="btn btn-danger" href="{%url 'return_list'%}"> Cancelar</a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <form method="POST" enctype="multipart/form-data">
+                {%csrf_token%}
+            {{ form|bootstrap }}
+                <input class="btn btn-info margin-adjust" type="submit" value="Salvar">
+                <a class="btn btn-danger margin-adjust" href="{%url 'return_list'%}"> Cancelar</a>
+            </form>
+            
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
 {%endblock%}
- 
