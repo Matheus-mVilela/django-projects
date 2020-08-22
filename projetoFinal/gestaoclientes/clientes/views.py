@@ -8,8 +8,17 @@ from .form import PersonForm
 
 @login_required
 def person_list(request):
-    persons = Person.objects.all()
-    return render(request, "person.html", {"persons": persons})
+    termo_busca = request.GET.get('pesquisa', None)
+    
+    if termo_busca:
+        persons = Person.objects.all()
+        persons = persons.filter(first_name=termo_busca)
+    else:
+        persons = Person.objects.all()    
+    
+    return render(
+        request, 'person.html', {'persons':persons}
+    )
 
 @login_required
 def person_new(request):
