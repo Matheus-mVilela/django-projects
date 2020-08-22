@@ -11,15 +11,17 @@
                 {%for person in persons%}
                 <li class="list-group-item">
                     <a href="{% url 'person_update' person.id%}">{{person.first_name}} {{person.last_name}}</a>
-                    <a class="trash-icon" href="{% url 'person_delete' person.id%}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <a class="trash-icon" href="{% url 'person_delete' person.id%}">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
                 </li>
                 {%endfor%}
             </ul>
             <a href="{%url 'person_new'%}" class="btn btn-warning margin-adjust">Cadastar Novamente</a>
-            <a class="btn btn-danger margin-adjust" href="{%url 'logout'%}">Sair</a>
+            <a href="{%url 'back_home'%}" class="btn btn-warning margin-adjust">Home</a>
         </div>
         <div class="col-sm">
-           
+            <a class="btn btn-danger right-item" href="{%url 'logout'%}">Logout</a>
         </div>
     </div>
 </div>

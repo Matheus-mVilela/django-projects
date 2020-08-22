@@ -49,3 +49,7 @@ def person_delete(request, id):
 
 def return_list(request):
     return redirect("person_list")
+
+
+def back_home(request):
+    return redirect("homepage")
